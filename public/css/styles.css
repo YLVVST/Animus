@@ -1,0 +1,328 @@
+/**
+ * Este es el estilo general de la página.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap');
+:root {
+    --main-pink-color: #FF6462;
+    --main-grey-color: rgb(134, 134, 134);
+    --main-blue-color: #016F88;
+    --white-contrast: rgb(221, 221, 221);
+    --black-medio-grey: #333;
+}
+
+@media (max-width: 760px) {
+    .mt-mobile-20 {
+        margin-top: 20px !important;
+    }
+    .mt-mobile-30 {
+        margin-top: 30px !important;
+    }
+    .mt-mobile-40 {
+        margin-top: 40px !important;
+    }
+    .mt-mobile-50 {
+        margin-top: 50px !important;
+    }
+}
+
+body {
+    height: 100% !important;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-pink {
+    color: var(--main-pink-color);
+}
+
+.text-grey {
+    color: var(--main-grey-color);
+}
+
+.btn-pink {
+    background-color: var(--main-pink-color);
+}
+
+.btn-pink span {
+    color: white !important;
+}
+
+.btn-blue {
+    background-color: var(--main-blue-color);
+    color: white !important;
+}
+
+.decoration-none {
+    text-decoration: none;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+
+/**
+ * PAGINA DE REGISTRO DE FORMULARIO
+ */
+
+.register-block {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 1px solid var(--white-contrast);
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.register-block .form-icon {
+    font-size: 100px;
+}
+
+
+/**
+ * NAVBAR
+ */
+
+@media (max-width: 760px) {
+    .principal-nav {
+        display: none !important;
+    }
+}
+
+@media (min-width: 760px) {
+    .mobile-nav {
+        display: none;
+    }
+}
+
+.nav-sup-band {
+    border-bottom: 1px solid var(--white-contrast);
+}
+
+.nav-sup-band a,
+.nav-sup-band span {
+    text-decoration: none;
+    color: var(--main-grey-color);
+}
+
+.nav-sup-band i {
+    color: var(--main-pink-color);
+}
+
+.nav-sup-band a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-brand-block img {
+    max-width: 80px;
+}
+
+.bag-button {
+    font-size: 35px;
+}
+
+.custom-nav {
+    background-color: var(--main-blue-color) !important;
+    font-size: 18px !important;
+    font-family: 'Barlow', sans-serif !important;
+}
+
+.custom-nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+.custom-nav a:hover {
+    color: rgb(218, 218, 218);
+}
+
+.mobile-nav .custom-menu-collapsed a {
+    width: 100%;
+    border-bottom: 1px solid var(--main-grey-color);
+    color: black !important;
+}
+
+.mobile-nav a {
+    color: black !important;
+}
+
+.custom-badge {
+    width: 30px;
+    height: 20px;
+    font-size: 13px;
+    top: 20px !important;
+    left: 50px !important;
+}
+
+
+/**
+ * FOOTER
+ */
+
+footer {
+    background-color: var(--black-medio-grey);
+    color: white;
+}
+
+footer .sub-footer {
+    border-top: 1px solid var(--main-grey-color);
+}
+
+footer .payment-block {
+    font-size: 30px !important;
+}
+
+footer .payment-block a {
+    text-decoration: none;
+    color: white;
+}
+
+footer .social-block {
+    font-size: 30px !important;
+}
+
+footer .social-block a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/**
+ * HOME
+ */
+
+.masonry-container {
+    height: 400px;
+}
+
+.masonry-item {
+    min-height: 50%;
+    max-height: 100%;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.masonry-item .masonry-courtain {
+    background-color: #53535369;
+    min-height: 200px !important;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 2;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    vertical-align: middle;
+    display: -webkit-box;
+}
+
+.masonry-item .masonry-courtain:hover {
+    opacity: 1;
+}
+
+.masonry-item a {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+}
+
+
+/**
+ * CATEGORIAS
+ */
+
+.bottom-border a {
+    position: relative;
+    padding: 10px 20px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+}
+
+.bottom-border a::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 5px;
+    background: #FF6462;
+    transition: width 0.3s;
+}
+
+.bottom-border a:hover::after {
+    width: 100%;
+    transition: width 0.3s;
+}
+
+.bottom-border a.active-band::after {
+    width: 100%;
+}
+
+.bottom-border a+a::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 5px;
+    background: #FF6462;
+    transition: width 0.3s;
+}
+
+.bottom-border a+a:hover::after {
+    width: 100%;
+    transition: width 0.3s;
+}
+
+
+/**
+ * Formularios
+ */
+
+.form-container {
+    border: 1px solid var(--white-contrast);
+    border-radius: 20px;
+    padding: 50px;
+    margin: 20px 0px 20px 0px;
+}
+
+
+/**
+ * Registo de producto
+ */
+
+.product-form .form-icon {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+
+/**
+ * ITEM PRODUCT
+ */
+
+.line-clamp {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+
+/**
+ * PROFILE
+ */
+
+.profile-logo span {
+    font-size: 200px;
+    text-align: center;
+}
